@@ -90,3 +90,6 @@ __export__ () {
     # A convenience function to allow prettier exports. It affords white space.
     export $1=$2
 }
+__map__ () {fn=$1;shift;for ii in $*;do $fn $ii;done;}
+__ls__  () {for f in $(/bin/ls ${1});do echo ${1}/${f};done;}
+
